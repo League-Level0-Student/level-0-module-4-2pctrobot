@@ -21,12 +21,12 @@ int dime = Integer.parseInt(dimes);
 String quarters = JOptionPane.showInputDialog("How many quarters do you have");
 int quarter = Integer.parseInt(quarters);
 		// Convert their answer to an int.   Hint: Integer.parseInt()  
-int n = nickel * (int) 0.05;
-int d = dime * (int) 0.10;
-int q = quarter * (int) 0.25;
+double n = nickel * 0.05;
+double d = dime * 0.10;
+double q = quarter * 0.25;
 
-int cash = d + q + n;
-JOptionPane.showMessageDialog(null, "" + cash);
+double cash = d + q + n;
+JOptionPane.showMessageDialog(null, "You have " + cash);
 		// Ask the user how many dimes they have, and convert their answer
 
 		// Ask the user how many quarters they have, and convert their answer
