@@ -7,7 +7,7 @@ public static void main(String[] args) {
 	double point = 0;
 	String question1 = JOptionPane.showInputDialog("What is the name of the protagonist in Hollow Knight?");
 	if(question1.equals("Ghost")) {
-		point = point + 15.50;
+		point = point + 12.50;
 	}
 	String question2 = JOptionPane.showInputDialog("What is the name of the former king of Hollownest?");
 	if(question2.equals("The Pale King")) {
