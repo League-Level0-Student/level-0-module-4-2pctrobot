@@ -15,8 +15,8 @@ public class RedSquare {
 	
 	public static void main(String[] args) {
 		
-		boolean isRed = false;
-		boolean isSquare = true;
+		boolean isRed = true;
+		boolean isSquare = false;
 		
 		// The && shown here means that both booleans must be true for the 
 		// entire if statement to be true. It is referred to as the "and"
@@ -24,12 +24,21 @@ public class RedSquare {
 		if(isRed && isSquare) {
 			drawRedSquare();
 		}
-		else {
-            JOptionPane.showMessageDialog(null, "No shape was drawn!");
-        }
-		
 		// 1. Run the program and notice no shape is drawn.
-		
+		if(!isRed && isSquare) {
+			drawBlueSquare();
+		}
+		if(isRed && !isSquare) {
+			drawRedTriangle();
+		}
+		if(!isRed && !isSquare) {
+			drawBlueTriangle();
+		}
+		if(isSquare) {
+			JOptionPane.showMessageDialog(null, "You drew a square!");
+		} else {
+			JOptionPane.showMessageDialog(null, "You drew a triangle!");
+		}
 		// 2. Initialize isRed to true instead of false and run the program 
 		//    again.
 		
@@ -74,7 +83,7 @@ public class RedSquare {
 		rob.setPenColor(Color.red);
 		for (int i = 0; i < 4; i++) {
 			rob.turn(90);
-			rob.move(100);
+			rob.move(500);
 		}
 		
 		drewRedSquare = true;
@@ -87,7 +96,7 @@ public class RedSquare {
 		rob.setPenColor(Color.blue);
 		for (int i = 0; i < 4; i++) {
 			rob.turn(90);
-			rob.move(100);
+			rob.move(500);
 		}
 		
 		drewBlueSquare = true;
@@ -100,7 +109,7 @@ public class RedSquare {
 		rob.setPenColor(Color.red);
 		for (int i = 0; i < 3; i++) {
 			rob.turn(120);
-			rob.move(100);
+			rob.move(500);
 		}
 		
 		drewRedTriangle = true;
@@ -114,7 +123,7 @@ public class RedSquare {
 		rob.setPenColor(Color.blue);
 		for (int i = 0; i < 3; i++) {
 			rob.turn(120);
-			rob.move(100);
+			rob.move(500);
 		}
 		
 		drewBlueTriangle = true;
