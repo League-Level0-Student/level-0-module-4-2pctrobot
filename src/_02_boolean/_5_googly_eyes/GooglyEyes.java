@@ -25,6 +25,7 @@ import processing.core.PImage;
      circles! To do this, imagine a rectangle that the pupil should stay
      within. When mouseX and mouseY goes outside of these bounds, set it back
      to the boundary. Put this code before you draw the pupils.
+     +92 +3
 */
 
 
@@ -51,16 +52,45 @@ public class GooglyEyes extends PApplet {
 
     @Override
     public void draw() {
+    	int lefteyeX = mouseX;
+    	int lefteyeY = mouseY;
+    	int righteyeX = mouseX;
+    	int righteyeY = mouseY;
+    	if(mouseY <= 136) {
+    		lefteyeY = 136;
+    	}
+    	if(mouseX <= 230) {
+    		lefteyeX = 230;
+    	}
+    	if(mouseY >= 169) {
+    		lefteyeY = 169;
+    	}
+    	if(mouseX >= 264) {
+    		lefteyeX = 264;
+    	}
+    	if(mouseY <= 139) {
+    		righteyeY = 139;
+    	}
+    	if(mouseX <= 322) {
+    		righteyeX = 322;
+    	}
+    	if(mouseY >= 172) {
+    		righteyeY = 172;
+    	}
+    	if(mouseX >= 355) {
+    		righteyeX = 355;
+    	}
     	image(face,0,0);
     	println(mouseX, mouseY);
     	fill(255,255,255);
     	ellipse(246,152,60,60);
-    	fill(0,0,0);
-    	ellipse(mouseX,mouseY,25,25);
+    	fill(255,255,0);
+    	ellipse(lefteyeX,lefteyeY,25,25);
     	fill(255,255,255);
     	ellipse(338,155,60,60);
-    	fill(0,0,0);
-    	ellipse(mouseX+92,mouseY+3,25,25);
+    	fill(255,255,0);
+    	ellipse(righteyeX,righteyeY,25,25);
+    	
     }
 
     static public void main(String[] args) {
