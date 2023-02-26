@@ -10,11 +10,17 @@ String sentence = "Words";
 		// 2. Print the 3rd char of your String to the console.
 		//    HINT: .charAt
 System.out.println(sentence.charAt(2));
-System.out.println(sentence.length());		
+System.out.println(sentence.length());	
+char letter = 'o';
+
 		// 3. Print the length of your String to the console.
 		//    HINT: .length()
 for (int i = 0; i < sentence.length(); i++) {
-	System.out.println(sentence.charAt(i));
+	if(sentence.charAt(i) == letter) {
+		System.out.println(letter + " is at " + i);
+		
+	}
+	
 	
 	
 }
@@ -30,6 +36,13 @@ for (int i = 0; i < sentence.length(); i++) {
 		//             for char 'b', then print "b is at index 1"
 		
 	}
-}
+
+	
+		
+	}
+
+		
+	
+
 
 
