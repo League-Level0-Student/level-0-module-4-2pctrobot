@@ -13,9 +13,8 @@ public class HideTheCreeper extends PApplet {
 
     @Override
     public void setup() {
-    	PImage minecraft = loadImage("minecraft.png");
-        minecraft.resize(WIDTH, HEIGHT);
-        background(minecraft);
+    	
+
     }
 
     @Override
